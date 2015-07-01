@@ -3,7 +3,7 @@
 // Module dependencies
 var express    = require('express');
 var config     = require('../config');
-var middleware = require('../middleware/config.middleware');
+var middleware = require('../middleware');
 
 // Define the Express configuration function
 function configureExpressApp() {
@@ -17,7 +17,7 @@ function configureExpressApp() {
   app.set('x-powered-by', false);
 
   // Set the application view engine and 'views' folder
-  require('../template_engine/config.template-engine')(app);
+  require('../template_engine')(app);
 
   // Configure middleware
   if (process.env.NODE_ENV === 'development') {app.use(middleware.logger('dev'));}
@@ -40,7 +40,7 @@ function configureExpressApp() {
   ));
 
   // Load routes
-  app.use('/', require('../../app_server/routes/server.routes.index.js'));
+  app.use('/', require('../../app_server/routes'));
 
   // 404 handler
   app.use(middleware._404);

@@ -3,8 +3,8 @@
 // Module dependencies
 var express = require('express');
 var router = express.Router();
-var boardsController = require('../controllers/server.controllers.boards.js');
-var postsController = require('../controllers/server.controllers.posts.js');
+var boardsController = require('../controllers/boards');
+var postsController = require('../controllers/posts');
 
 // Home page
 router.get('/', boardsController.getListOfBoards);

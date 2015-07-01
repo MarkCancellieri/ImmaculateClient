@@ -20,7 +20,7 @@ var getPostById = function(req, res) {
 var getPost = function(req, res) {
   var post = getPostById(req, res);
 
-  res.render('server.views.posts.display-post.hbs', {
+  res.render('posts.display-post.hbs', {
     pageName : 'Posts',
     post     : post
   });

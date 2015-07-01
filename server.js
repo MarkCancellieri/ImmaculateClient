@@ -6,7 +6,7 @@ process.env.PORT     = process.env.PORT     || 3000;
 
 // Module dependencies
 var http    = require('http');
-var express = require('./config/express/config.express');
+var express = require('./config/express');
 
 // Create a new Express application instance
 var app = express();

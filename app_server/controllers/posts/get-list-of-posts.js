@@ -62,7 +62,7 @@ var getListOfPosts = function(req, res) {
     nextLink = res.locals.paginate.href(false);
   }
 
-  res.render('server.views.posts.posts-list.hbs', {
+  res.render('posts.posts-list.hbs', {
     pageName     : 'Home',
     posts        : postsData.posts,
     previousLink : previousLink,

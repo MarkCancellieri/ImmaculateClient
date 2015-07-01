@@ -57,7 +57,7 @@ var getListOfBoards = function(req, res, next) {
       // Get the links for the page numbers
       pageLinks = getPageLinks(req, res, page, limit, body);
 
-      res.render('server.views.boards.boards-list.hbs', {
+      res.render('boards.boards-list.hbs', {
         pageName      : 'Home',
         boards        : body.boards,
         previousLink  : previousLink,
